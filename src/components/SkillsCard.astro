@@ -1,0 +1,78 @@
+---
+const { skills } = Astro.props;
+
+const sections = [
+  { title: "Languages", items: skills.languages },
+  { title: "Frameworks", items: skills.frameworks },
+  { title: "Coursework", items: skills.coursework },
+];
+---
+<!-- (With the Dropdown)
+<div class="card">
+  {sections.map(section => (
+    <details class="dropdown">
+      <summary>{section.title}</summary>
+
+      <div class="tags">
+        {section.items.map(item => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </details>
+  ))}
+</div>
+-->
+
+<div class="card">
+  {sections.map(section => (
+    <div class="section">
+      <h3>{section.title}</h3>
+
+      <div class="tags">
+        {section.items.map(item => (
+          <span>{item}</span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
+
+<style>
+  .card {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: auto;
+  }
+
+  .dropdown {
+    margin-bottom: 2rem;
+  }
+
+  summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+
+  .tags {
+    margin-top: 0.5rem;
+  }
+
+  .tags span {
+    background: linear-gradient(80deg, #2b54b4, #763aee);
+    margin: 0.3rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.9rem;
+    color: white;
+  }
+
+  .tags span:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(118, 58, 238, 0.64);
+  }
+</style>

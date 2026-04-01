@@ -1,0 +1,26 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+const { projects } = Astro.props;
+
+// duplicate for infinite effect
+const loopProjects = [...projects, ...projects];
+---
+
+<div class="carousel">
+  {projects.map(project => (
+    <ProjectCard {...project} />
+  ))}
+</div>
+
+<style>
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+</style>

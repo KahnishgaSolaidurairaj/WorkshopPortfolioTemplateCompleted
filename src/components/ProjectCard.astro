@@ -1,0 +1,56 @@
+---
+const { title, description, image, tags, github, demo } = Astro.props;
+---
+
+<div class="card">
+  <img src={image} />
+
+  <h3>{title}</h3>
+  <p> {description} </p>
+
+  <div class="tags">
+    {tags.map(tag => <span>{tag}</span>)}
+  </div>
+
+  <div class="buttons">
+    {github && <a href={github} target="_blank">GitHub</a>}
+    {demo && <a href={demo} target="_blank">Demo</a>}
+  </div>
+</div>
+
+<style>
+  .card {
+    min-width: 250px;
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-right: 1rem;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .tags span {
+    background: linear-gradient(80deg, #2b54b4, #763aee);
+    margin: 0.2rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: white;
+  }
+
+  .buttons a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: #38bdf8;
+    color: black;
+    border-radius: 20px;
+    // border-weight: 2px;
+    // border: #eb38f8;
+    text-decoration: none; // gets rid of the default link outline
+  }
+</style>
