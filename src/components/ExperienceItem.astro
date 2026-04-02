@@ -1,0 +1,94 @@
+---
+const { title, company, date, points } = Astro.props;
+---
+
+<div class="experience-item">
+  <button class="experience-header">
+    <div>
+      <h3>{title}</h3>
+      <p class="company">{company}</p>
+    </div>
+    <span class="date">{date}</span>
+    <span class="arrow">⌄</span>
+  </button>
+
+  <div class="experience-content">
+    <ul>
+      {points.map(point => (
+        <li>{point}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+.experience-item {
+  background: #1e293b;
+  border-radius: 12px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+/* Header */
+.experience-header {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.experience-header h3 {
+  margin: 0;
+}
+
+.company {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Dropdown content */
+.experience-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 1.5rem;
+}
+
+.experience-content ul {
+  margin: 1rem 0;
+}
+
+.experience-item.active .experience-content {
+  max-height: 300px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.experience-item.active .arrow {
+  transform: rotate(180deg);
+}
+</style>
+
+<script>
+  const items = document.querySelectorAll('.experience-item');
+
+  items.forEach(item => {
+    const header = item.querySelector('.experience-header');
+
+    header.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>

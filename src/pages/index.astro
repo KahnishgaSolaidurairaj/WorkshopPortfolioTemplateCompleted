@@ -6,6 +6,9 @@ import Contact from "../components/Contact.astro";
 
 import projects from "../data/projects.js";
 import skills from "../data/skills.js";
+
+import ExperienceItem from "../components/ExperienceItem.astro";
+import experience from "../data/experience.js";
 ---
 
 <BaseLayout title="Portfolio">
@@ -13,7 +16,7 @@ import skills from "../data/skills.js";
   <!-- Hero -->
   <section id="home">
     <div class="container">
-      <img src="https://via.placeholder.com/150" class="profile" />
+      <img src="/images/square.avif" class="profile" />
 
       <h1> Kahnishga Solaidurairaj </h1>
       <p> A Computer Science Student passionate about learning new skills and creating ✨ </p>
@@ -58,6 +61,15 @@ import skills from "../data/skills.js";
     <div class="container">
       <h2>Projects</h2>
       <ProjectCarousel projects={projects} />
+    </div>
+  </section>
+
+  <!-- Experiance (title, date, and company should be shown) DropDown for each (will include bullet points of the position) -->
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2>Experience</h2>
+      {experience.map(exp => (<ExperienceItem {...exp} />))}
     </div>
   </section>
 
@@ -127,7 +139,6 @@ import skills from "../data/skills.js";
   .about-text p{
     color: white;
   }
-
 
   /* 📱 Responsive behavior */
   @media (max-width: 768px) {
