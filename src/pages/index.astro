@@ -90,8 +90,10 @@ import skills from "../data/skills.js";
   .about-row {
     display: flex;
     align-items: center;
+    //justify-content: center; /* centers content horizontally */
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    max-width: 900px;
   }
 
   /* Flip layout for second row */
@@ -105,12 +107,21 @@ import skills from "../data/skills.js";
     border-radius: 12px;
   }
 
-  .about-text {
+  /* .about-text {
     flex: 1;
     background: #1e293b;
     padding: 2rem;
     border-radius: 12px;
-    margin: auto;
+    max-width: 500px;
+  } */
+
+  .about-text {
+    flex: 1;
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .about-text p{
