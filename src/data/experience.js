@@ -2,7 +2,7 @@ const experience = [
   {
     title: "Sandbox Labratory Assistant",
     company: "Innovation Center",
-    date: "Feb 2026 - Present5",
+    date: "Feb 2026 - Present",
     points: [
       "Supporting hands-on learning experiences focused on Swift programming and Apple developer tools as part of Apple’s Community Education Initiative",
       "Collaborating with lab and teaching staff to facilitate immersive, community-focused technology events"
@@ -19,7 +19,7 @@ const experience = [
   }, 
   {
     title: "Research Assistant - Detecting Emotions in Large Language Models",
-    company: "University of Illinois Chicago",
+    company: "University of Illinois Chicago College of Engineering",
     date: "June 2025 - Aug 2025", 
     points: [
       "Read academic papers related to LLM exhibition of emotions, and interacted with existing LLM’s to determine whether they behave in a way that exhibits emotions", 

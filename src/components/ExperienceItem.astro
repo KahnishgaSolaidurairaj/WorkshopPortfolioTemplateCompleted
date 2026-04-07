@@ -4,12 +4,15 @@ const { title, company, date, points } = Astro.props;
 
 <div class="experience-item">
   <button class="experience-header">
-    <div>
+    <div class="left">
       <h3>{title}</h3>
-      <p class="company">{company}</p>
+      <span class="company">{company}</span>
     </div>
-    <span class="date">{date}</span>
-    <span class="arrow">⌄</span>
+
+    <div class="right">
+      <span class="date">{date}</span>
+      <span class="arrow">⌄</span>
+    </div>
   </button>
 
   <div class="experience-content">
@@ -29,31 +32,59 @@ const { title, company, date, points } = Astro.props;
   overflow: hidden;
 }
 
-/* Header */
 .experience-header {
   width: 100%;
   background: none;
   border: none;
   color: white;
   padding: 1.5rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+}
+
+/* LEFT SIDE */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
 }
 
 .experience-header h3 {
   margin: 0;
+  font-size: 1.1rem;
 }
 
+/* Company pill */
 .company {
-  font-size: 0.9rem;
-  opacity: 0.7;
+  font-size: 0.75rem;
+  background: linear-gradient(80deg, #2b54b4, #763aee);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .date {
   font-size: 0.85rem;
   opacity: 0.7;
+}
+
+/* Arrow animation */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.experience-item.active .arrow {
+  transform: rotate(180deg);
 }
 
 /* Dropdown content */
