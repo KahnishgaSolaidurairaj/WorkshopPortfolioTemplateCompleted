@@ -1,6 +1,6 @@
 # Designing your Online Portfolio
 
-This is a completed version of the template for the 
+This is a completed version of the template for the Designing your Online Portfolio Workshop 
 
 ## 🚀 Project Structure
 
@@ -14,18 +14,20 @@ Inside of this Astro project, you'll see the following folders and files:
 ├── src/
 │   └── components/
 │       └── Contact.astro
+│       └── ExperianceItem.astro
 │       └── Navbar.astro
 │       └── ProjectCard.astro
 │       └── ProjectCarousel.astro
 │       └── SkillsCard.astro
 │   └── data/
+│       └── experience.js
 │       └── projects.js
 │       └── skills.js
 │   └── layout/
 │       └── BaseLayout.astro
 │   └── pages/
 │       └── index.astro
-└── package.json
+└── .gitignore
 ```
 
 Any static assets, like images, can be placed in the `public/` directory.

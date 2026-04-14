@@ -1,9 +1,6 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 const { projects } = Astro.props;
-
-// duplicate for infinite effect
-const loopProjects = [...projects, ...projects];
 ---
 
 <div class="carousel">
@@ -18,9 +15,5 @@ const loopProjects = [...projects, ...projects];
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 1rem;
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none;
   }
 </style>

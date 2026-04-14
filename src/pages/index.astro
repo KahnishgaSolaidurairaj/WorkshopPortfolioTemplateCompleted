@@ -15,7 +15,8 @@ import experience from "../data/experience.js";
 
   <!-- Hero -->
   <section id="home">
-    <div class="container hero">
+    <div class="container">
+      <div class = "hero">
       <div class="hero-text">
         <h1>Kahnishga Solaidurairaj</h1>
         <p>A Computer Science Student passionate about learning new skills and creating ✨</p>
@@ -24,10 +25,11 @@ import experience from "../data/experience.js";
       <div class="hero-image">
         <img src="/images/square.avif" class="profile" />
       </div>
+      </div>
     </div>
   </section>
 
-  <!-- About me (LEFT RIGHT IDEA)-->
+  <!-- About me (LEFT RIGHT)-->
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
@@ -37,7 +39,6 @@ import experience from "../data/experience.js";
         <div class="about-image">
           <img src="/images/uic.avif" />
         </div>
-
         <div class="about-text">
           <p> I’m a third-year Computer Science undergraduate at the University of Illinois at Chicago, with a minor in Mathematics and am a member of the Honors College. I live in the city and commute to campus, when the weather’s nice I like to bike, but I usually walk. At UIC, I enjoy being involved in WiCS, WiCys, WiEP, and participating in Commuter and Off-campus life events.</p>
           <p> From a young age, I have been drawn to creativity, whether through art, design, or problem-solving, which led me to programming. I love building, experimenting, and pushing my limits, and am always looking for new challenges to expand my skills. </p>
@@ -49,7 +50,6 @@ import experience from "../data/experience.js";
         <div class="about-image">
           <img src="/images/crochet1.avif"/>
         </div>
-
         <div class="about-text">
           <p> My hobbies outside of CS include crocheting and reading. I normally like to crochet smaller things like cute animals or objects. I also create tapestries, sweaters, and crochet flowers. I also like to read alot, my favorite genre is science-fiction, suspense, and thriller. I also read comics specifically webtoons. </p>
           <p> I also love to take pictures and capture my feelings + current intrests through scrapbooking, bullet journalling and just creating yearly albums.</p>
@@ -66,7 +66,6 @@ import experience from "../data/experience.js";
     </div>
   </section>
 
-  <!-- Experiance (title, date, and company should be shown) DropDown for each (will include bullet points of the position) -->
   <!-- Experience -->
   <section id="experience">
     <div class="container">
@@ -83,7 +82,7 @@ import experience from "../data/experience.js";
     </container>
   </section>
 
-  <!-- CONTACT - learning buttons utilizing icons -->
+  <!-- CONTACT - buttons utilizing icons -->
   <section id="contact">
     <div class="container">
       <Contact 
@@ -115,54 +114,31 @@ import experience from "../data/experience.js";
     gap: 2rem;
     margin: 3rem auto;
     max-width: 1000px;
-
-    /*display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-
-    margin: 3 auto;
-    max-width: 1000px;*/
   }
 
-/* LEFT SIDE */
-.hero-text {
-  flex: 1;
-}
+  .hero-text {
+    flex: 1;
+  }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-/* RIGHT SIDE */
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.profile {
-  width: 250px;
-  border-radius: 16px;
-}
-
-/* 📱 Mobile */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column-reverse; /* image on top */
-    text-align: center;
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   .hero-image {
-    justify-content: center;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
-}
+
+  .profile {
+    width: 250px;
+    border-radius: 16px;
+  }
 
   .about-row {
     display: flex;
     align-items: center;
-    //justify-content: center; /* centers content horizontally */
     gap: 2rem;
     margin: 2rem auto;
     max-width: 900px;
@@ -179,14 +155,6 @@ import experience from "../data/experience.js";
     border-radius: 12px;
   }
 
-  /* .about-text {
-    flex: 1;
-    background: #1e293b;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 500px;
-  } */
-
   .about-text {
     flex: 1;
     background: #1e293b;
@@ -200,8 +168,17 @@ import experience from "../data/experience.js";
     color: white;
   }
 
-  /* 📱 Responsive behavior */
-  @media (max-width: 768px) {
+  /* Responsive behavior - Shuffling things when the page shrinks */
+  @media (max-width: 800px) {
+    .hero {
+      flex-direction: column-reverse; /* image on top */
+      text-align: center;
+    }
+
+    .hero-image {
+      justify-content: center;
+    }
+
     .about-row,
     .about-row.reverse {
       flex-direction: column;   /* stack vertically */
@@ -213,4 +190,3 @@ import experience from "../data/experience.js";
     }
   }
 </style>
-

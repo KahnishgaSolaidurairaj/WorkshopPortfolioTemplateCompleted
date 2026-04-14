@@ -7,21 +7,6 @@ const sections = [
   { title: "Coursework", items: skills.coursework },
 ];
 ---
-<!-- (With the Dropdown)
-<div class="card">
-  {sections.map(section => (
-    <details class="dropdown">
-      <summary>{section.title}</summary>
-
-      <div class="tags">
-        {section.items.map(item => (
-          <span>{item}</span>
-        ))}
-      </div>
-    </details>
-  ))}
-</div>
--->
 
 <div class="card">
   {sections.map(section => (
@@ -43,18 +28,6 @@ const sections = [
     background: #1e293b;
     padding: 2rem;
     border-radius: 12px;
-    margin: auto;
-  }
-
-  .dropdown {
-    margin-bottom: 2rem;
-  }
-
-  summary {
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 0.5rem;
   }
 
   .tags {
