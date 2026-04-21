@@ -2,6 +2,8 @@
 
 This is a completed version of the template for the Designing your Online Portfolio Workshop 
 
+Vercel Deployed Link --> https://workshop-portfolio-template-complet.vercel.app 
+
 ## 🚀 Project Structure
 
 Inside of this Astro project, you'll see the following folders and files:
